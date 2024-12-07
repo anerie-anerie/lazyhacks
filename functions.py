@@ -3,7 +3,7 @@ import numpy as np
 
 #  Prediction function for testing purposes
 def predict_skin(image_path):
-    model = tf.keras.models.load_model('skincolor.keras')
+    model = tf.keras.models.load_model('skincolor.h5')
     model.compile()
     img = tf.keras.preprocessing.image.load_img(image_path, target_size=(150, 150))
     img_array = tf.keras.preprocessing.image.img_to_array(img)
@@ -16,7 +16,7 @@ def predict_skin(image_path):
 
 # Prediction function for testing purposes
 def predict_hairtype(image_path):
-    model = tf.keras.models.load_model('hairtype.keras')
+    model = tf.keras.models.load_model('hair_type_model.h5')
     model.compile()
     img = tf.keras.preprocessing.image.load_img(image_path, target_size=(150, 150))
     img_array = tf.keras.preprocessing.image.img_to_array(img)
