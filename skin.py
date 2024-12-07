@@ -150,7 +150,7 @@ plt.show()
 model.save("skincolor.keras")
 
 # Prediction function for testing purposes
-def predict_palm(image_path, model):
+def predict_skin(image_path, model):
     img = tf.keras.preprocessing.image.load_img(image_path, target_size=(150, 150))
     img_array = tf.keras.preprocessing.image.img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0)
@@ -162,5 +162,5 @@ def predict_palm(image_path, model):
 
 # Example usage
 image_path = 'hair_types/curly/image.png'
-prediction = predict_palm(image_path, model)
+prediction = predict_skin(image_path, model)
 print(f"Predicted class: {prediction}")
