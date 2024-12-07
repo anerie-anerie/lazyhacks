@@ -4,6 +4,8 @@ import cv2
 import os
 from matplotlib import pyplot as plt
 
+#basically add an image into the folder and rename the image variable accoridngly then output the avatar into downloads
+
 # Example usage for recoloring "shortwave.jpg"
 image = 'eddie_teter.jpeg'
 
@@ -100,7 +102,7 @@ def recolor_image(input_image_path, output_image_name, skin_color, hair_color):
 skin = predict_skin(image)
 hairstyle = predict_hairtype(image)
 
-if hairstyle.lower() == "curly" or hairstyle.lower() == "wavy":
+if hairstyle.lower() == "curly" or hairstyle.lower() == "wavy" or hairstyle.lower() == "straight" :
     print(f"Hairstyle detected: {hairstyle}, proceeding with recoloring...")
     skin_color = (45, 98, 150)  # Brown shade (BGR)
     #(106, 178, 255)
