@@ -117,7 +117,7 @@ steps_per_epoch = len(train_generator) // batch_size
 
 # Callbacks for training
 early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
-model_checkpoint = ModelCheckpoint("hair_type_model.h5", save_best_only=True)
+model_checkpoint = ModelCheckpoint("hairtype.keras", save_best_only=True)
 reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=2, min_lr=1e-6)
 
 max_steps = 200
@@ -162,13 +162,13 @@ plt.title('Confusion Matrix')
 plt.show()
 
 # Save the trained model
-model.save("hair_types_model.h5")
+model.save("hairtype.keras")
 
 # ===================== Step 6: Prediction Function =====================
 
 # Function to predict the class of a given image
 def predict_image(image_path):
-    model = tf.keras.models.load_model('hair_types_model.h5')
+    model = tf.keras.models.load_model('hairtype.keras')
     img = tf.keras.preprocessing.image.load_img(image_path, target_size=(150, 150))
     img_array = tf.keras.preprocessing.image.img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0)
