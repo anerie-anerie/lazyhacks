@@ -1,0 +1,36 @@
+{
+    "name": "avatar-selector",
+    "version": "1.0.0",
+    "description": "React Avatar Selector with Tops and Bottoms Change Functionality",
+    "main": "index.html",
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "lint": "eslint src/",
+      "eject": "react-scripts eject",
+      "dev": "live-server ./src"
+    },
+    "dependencies": {
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+      "live-server": "^1.2.1",
+      "react-scripts": "^5.0.1",
+      "eslint": "^7.32.0"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    }
+  }
+  
